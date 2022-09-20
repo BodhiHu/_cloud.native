@@ -33,7 +33,10 @@ spec:
             - "-d"
             - {{ default "zadig" .Values.connections.mongodb.db | quote }}
             - "-f"
-            - "$(FROM_VERSION)"
+            # FIXME:
+            #- "$(FROM_VERSION)"
+            #- "1.3.0"
+            - "1.11.0"
             - "-t"
             - {{ .Chart.Version | quote }}
           env:
