@@ -1,0 +1,4 @@
+[submodule "kind"]
+	path = kind
+	url = git@github.com:BodhiHu/kind.git
+  branch = bodhi/dev
