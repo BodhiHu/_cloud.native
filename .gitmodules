@@ -2,3 +2,10 @@
 	path = kind
 	url = git@github.com:BodhiHu/kind.git
   branch = bodhi/dev
+[submodule "zadig"]
+	path = zadig
+	url = git@github.com:BodhiHu/zadig.git
+  branch = bodhi/dev
+[submodule "zadig-portal"]
+	path = zadig-portal
+	url = git@github.com:BodhiHu/zadig-portal.git

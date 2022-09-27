@@ -35,8 +35,8 @@ spec:
             - "-f"
             # FIXME:
             #- "$(FROM_VERSION)"
-            #- "1.3.0"
-            - "1.11.0"
+            - "1.3.0"
+            #- "1.11.0"
             - "-t"
             - {{ .Chart.Version | quote }}
           env:
