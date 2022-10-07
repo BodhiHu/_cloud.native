@@ -1,4 +1,4 @@
-# Cloud ZD - Cloud Native Microservices & CI/CD
+# Lotus Clouds - Cloud Native Microservices & CI/CD
 
 ## Setup on Local Dev Computer
 
