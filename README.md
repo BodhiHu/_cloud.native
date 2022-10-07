@@ -1,4 +1,4 @@
-# Cloud ZD - Cloud Native CI/CD with Microservices
+# Cloud ZD - Cloud Native Microservices & CI/CD
 
 ## Setup on Local Dev Computer
 
