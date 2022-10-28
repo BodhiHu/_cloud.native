@@ -1,4 +1,4 @@
-# Lotus Clouds - Cloud Native Microservices & CI/CD
+# Cloud Native Microservices & CI/CD
 
 ## Setup on Local Dev Computer
 
