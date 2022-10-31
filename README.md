@@ -1,13 +1,20 @@
 # Cloud Native Microservices & CI/CD
 
-## Create Kind Cluster
+## Create local kubernetes cluster with minikube
+`
+minikube start --nodes 3 --kubernetes-version=v1.22.15 --container-runtime docker
+`
+
+## Setup Kubesphere
+
+<!-----------------------------------DEPRECATED---------------------------------------------------
+## Deprecated
+
+#### Create Kind Cluster
 
 ```
 $ ./kind/bin/kind create cluster --name kind --config ./kind/clusters/multi-node-cluster.yaml
 ```
-
-<!-----------------------------------DEPRECATED------------------------------------------->
-## Deprecated
 
 #### Install zadig services
 
@@ -33,3 +40,5 @@ $ helm upgrade --debug -v 4 --timeout 300s --install zadig ./zadig-helm \
 ```
 
 Open ```http://127.0.0.1:31500``` to access dashboard.
+
+-------------------------------------------------------------------------------------------------->
