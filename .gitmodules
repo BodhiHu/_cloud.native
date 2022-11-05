@@ -6,4 +6,7 @@
 	path = zadig
 	url = git@github.com:BodhiHu/zadig.git
   branch = bodhi/dev
+[submodule "kubesphere-ks-installer"]
+	path = kubesphere-ks-installer
+	url = git@github.com:kubesphere/ks-installer.git
 

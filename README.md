@@ -1,11 +1,71 @@
 # Cloud Native Microservices & CI/CD
 
-## Create local kubernetes cluster with minikube
-`
-minikube start --nodes 3 --kubernetes-version=v1.22.15 --container-runtime docker
-`
+## Create local kubernetes cluster
 
-## Setup Kubesphere
+### with Minikube
+```
+minikube start --nodes 3 --kubernetes-version=v1.22.15 --container-runtime docker
+```
+
+### with Kind
+
+with K8S @ 1.22.15
+```
+$ ./kind/bin/kind create cluster --name kind-1.22.15 --config ./kind/clusters/multi-node-cluster-with-k8s-1.22.15.yaml
+```
+
+with K8S @ 1.25.0
+```
+$ ./kind/bin/kind create cluster --name kind-1.25.0 --config ./kind/clusters/multi-node-cluster-with-k8s-1.25.0.yaml
+```
+
+## Setup kube services:
+
+Install
+```
+kubectl apply -f https://github.com/kubesphere/ks-installer/releases/download/v3.3.0/kubesphere-installer.yaml
+
+kubectl apply -f https://github.com/kubesphere/ks-installer/releases/download/v3.3.0/cluster-configuration.yaml
+```
+
+Inspect the logs of installation:
+```
+kubectl logs -n kubesphere-system $(kubectl get pod -n kubesphere-system -l 'app in (ks-install, ks-installer)' -o jsonpath='{.items[0].metadata.name}') -f
+```
+
+Check if `ks-console` is running:
+```
+kubectl get svc/ks-console -n kubesphere-system
+```
+
+When it prints below messages in console,:
+```
+Collecting installation results ...
+#####################################################
+###              Welcome to KubeSphere!           ###
+#####################################################
+
+Console: http://192.168.49.2:30880
+Account: admin
+Password: P@88w0rd
+
+NOTES：
+  1. After you log into the console, please check the
+     monitoring status of service components in
+     "Cluster Management". If any service is not
+     ready, please wait patiently until all components
+     are up and running.
+  2. Please change the default password after login.
+
+#####################################################
+https://kubesphere.io             2022-10-31 05:54:15
+#####################################################
+```
+
+then we can access `ks-console`:
+```
+minikube service ks-console -n kubesphere-system --url
+```
 
 <!-----------------------------------DEPRECATED---------------------------------------------------
 ## Deprecated
