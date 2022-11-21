@@ -4,7 +4,9 @@
 
 ### with Minikube
 ```
-minikube start --nodes 3 --kubernetes-version=v1.22.15 --container-runtime docker
+# minikube start --nodes 3 --kubernetes-version=v1.22.15 -p minikube-1.22.15 --container-runtime docker
+# minikube start --nodes 3 --kubernetes-version=v1.23.13 -p minikube-1.23.13 --container-runtime docker
+$ minikube start --nodes 3 --kubernetes-version=v1.24.7  -p minikube-1.24.7  --container-runtime docker
 ```
 
 ### with Kind
@@ -14,9 +16,9 @@ with K8S @ 1.22.15
 $ ./kind/bin/kind create cluster --name kind-1.22.15 --config ./kind/clusters/multi-node-cluster-with-k8s-1.22.15.yaml
 ```
 
-with K8S @ 1.25.0
+with K8S @ 1.24.7
 ```
-$ ./kind/bin/kind create cluster --name kind-1.25.0 --config ./kind/clusters/multi-node-cluster-with-k8s-1.25.0.yaml
+$ ./kind/bin/kind create cluster --name kind-1.24.7 --config ./kind/clusters/multi-node-cluster-with-k8s-1.24.7
 ```
 
 ## Setup kube services:

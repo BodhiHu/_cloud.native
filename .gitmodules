@@ -2,11 +2,9 @@
 	path = kind
 	url = git@github.com:BodhiHu/kind.git
   branch = bodhi/dev
-[submodule "zadig"]
-	path = zadig
-	url = git@github.com:BodhiHu/zadig.git
-  branch = bodhi/dev
 [submodule "kubesphere-ks-installer"]
 	path = kubesphere-ks-installer
 	url = git@github.com:kubesphere/ks-installer.git
-
+[submodule "rke"]
+	path = rke
+	url = https://github.com/rancher/rke.git
