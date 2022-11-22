@@ -2,6 +2,14 @@
 
 ## Create local kubernetes cluster
 
+### with rancher/rke
+```
+$ docker-compose -f ./docker-nodes/docker-compose.yaml up -d
+# Download RKE from https://github.com/rancher/rke/releases
+$ curl -O https://github.com/rancher/rke/releases/download/v1.3.16/rke_linux-amd64
+# SSH to ubuntu-20.04-0 and run RKE
+```
+
 ### with Minikube
 ```
 # minikube start --nodes 3 --kubernetes-version=v1.22.15 -p minikube-1.22.15 --container-runtime docker
@@ -21,7 +29,7 @@ with K8S @ 1.24.7
 $ ./kind/bin/kind create cluster --name kind-1.24.7 --config ./kind/clusters/multi-node-cluster-with-k8s-1.24.7
 ```
 
-## Setup kube services:
+## Setup kubesphere services:
 
 Install
 ```

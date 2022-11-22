@@ -5,11 +5,12 @@ services:
     container_name: ubuntu-20.04-0
     build:
       context: .
-      dockerfile: Dockerfile.controller
+      dockerfile: Dockerfile
     restart: "unless-stopped"
     volumes:
       - ..:/app/clouds-native
       - /var/run/docker.sock:/var/run/docker.sock
+      - ./10.21.108.10/.ssh:/root/.ssh
     networks:
       default:
         ipv4_address: 10.21.108.10
@@ -20,16 +21,21 @@ services:
       context: .
       dockerfile: Dockerfile
     restart: "unless-stopped"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./10.21.108.11/.ssh:/root/.ssh
     networks:
       default:
         ipv4_address: 10.21.108.11
-    # command: /bin/bash -c "tail -f /dev/null"
   ubuntu-20_04-2:
     container_name: ubuntu-20.04-2
     build:
       context: .
       dockerfile: Dockerfile
     restart: "unless-stopped"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./10.21.108.12/.ssh:/root/.ssh
     networks:
       default:
         ipv4_address: 10.21.108.12
