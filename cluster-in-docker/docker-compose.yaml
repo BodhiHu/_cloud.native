@@ -10,7 +10,6 @@ services:
     volumes:
       - ..:/app/clouds-native
       - /var/run/docker.sock:/var/run/docker.sock
-      - ./10.21.108.10/.ssh:/root/.ssh
     networks:
       default:
         ipv4_address: 10.21.108.10
@@ -22,8 +21,8 @@ services:
       dockerfile: Dockerfile
     restart: "unless-stopped"
     volumes:
+      - ..:/app/clouds-native
       - /var/run/docker.sock:/var/run/docker.sock
-      - ./10.21.108.11/.ssh:/root/.ssh
     networks:
       default:
         ipv4_address: 10.21.108.11
@@ -34,8 +33,8 @@ services:
       dockerfile: Dockerfile
     restart: "unless-stopped"
     volumes:
+      - ..:/app/clouds-native
       - /var/run/docker.sock:/var/run/docker.sock
-      - ./10.21.108.12/.ssh:/root/.ssh
     networks:
       default:
         ipv4_address: 10.21.108.12

@@ -4,10 +4,18 @@
 
 ### with rancher/rke
 ```
-$ docker-compose -f ./docker-nodes/docker-compose.yaml up -d
-# Download RKE from https://github.com/rancher/rke/releases
-$ curl -O https://github.com/rancher/rke/releases/download/v1.3.16/rke_linux-amd64
-# SSH to ubuntu-20.04-0 and run RKE
+# Download RKE:
+$ curl https://github.com/rancher/rke/releases/download/v1.3.16/rke_linux-amd64 -o .bin/rke
+$
+# Start docker nodes:
+$ docker-compose -f ./cluster-in-docker/docker-compose.yaml up -d
+$
+# SSH to each docker node and run:
+$ eval "$(ssh-agent -s)" && ssh-add ~/.ssh/id_rsa
+$
+# SSH to ubuntu-20.04-0 and run RKE:
+$ chmod u+x clouds-native/.bin/rke 
+$ ./rke up --config clouds-native/cluster-in-docker/rke-cluster.yml
 ```
 
 ### with Minikube
