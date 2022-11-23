@@ -12,3 +12,15 @@
 	path = rancher
 	url = git@github.com:rancher/rancher.git
 
+[submodule "dapr"]
+	path = dapr
+	url = git@github.com:dapr/dapr.git
+[submodule "dapr-cli"]
+	path = dapr-cli
+	url = git@github.com:dapr/cli.git
+[submodule "dapr-quickstarts"]
+	path = dapr-quickstarts
+	url = git@github.com:dapr/quickstarts.git
+[submodule "kubernetes"]
+	path = kubernetes
+	url = git@github.com:kubernetes/kubernetes.git
