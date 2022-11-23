@@ -24,3 +24,6 @@
 [submodule "kubernetes"]
 	path = kubernetes
 	url = git@github.com:kubernetes/kubernetes.git
+[submodule "kubesphere"]
+	path = kubesphere
+	url = git@github.com:BodhiHu/kubesphere.git
