@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  single-node-cluster:
+    container_name: rancher-kube-single-node-cluster
+    image: rancher/rancher:latest
+    restart: "unless-stopped"
+    ports:
+      - 80:80
+      - 443:443
+    privileged: true
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: '4g'
+    memswap_limit: '4g'
+    volumes:
+      - ../..:/SunnyClouds
+    # command: /bin/bash -c "tail -f /dev/null"
