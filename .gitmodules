@@ -8,3 +8,7 @@
 [submodule "rke"]
 	path = rke
 	url = https://github.com/rancher/rke.git
+[submodule "rancher"]
+	path = rancher
+	url = git@github.com:rancher/rancher.git
+

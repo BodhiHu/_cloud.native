@@ -2,6 +2,19 @@
 
 ## Create local kubernetes cluster
 
+### single node cluster with rancher
+
+> https://docs.ranchermanager.rancher.io/pages-for-subheaders/rancher-on-a-single-node-with-docker#option-a-default-rancher-generated-self-signed-certificate
+
+```
+docker run -d --restart=unless-stopped \
+  -p 80:80 -p 443:443 \
+  --privileged \
+  --name rancher-kube-cluster \
+  --cpus="2.0" --memory="4g" --memory-swap="4g" \
+  rancher/rancher:latest
+```
+
 ### with rancher/rke
 ```
 # Download RKE:
