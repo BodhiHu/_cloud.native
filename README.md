@@ -106,7 +106,7 @@ then we can access `ks-console`:
 minikube service ks-console -n kubesphere-system --url
 ```
 
-<!-----------------------------------DEPRECATED---------------------------------------------------
+<!------------------------------------------------------------------------------------------------
 ## Deprecated
 
 #### Create Kind Cluster

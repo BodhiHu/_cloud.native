@@ -17,4 +17,3 @@ services:
     memswap_limit: '4g'
     volumes:
       - ../..:/SunnyClouds
-    # command: /bin/bash -c "tail -f /dev/null"

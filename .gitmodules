@@ -11,13 +11,14 @@
 [submodule "rancher"]
 	path = rancher
 	url = git@github.com:rancher/rancher.git
-
 [submodule "dapr"]
 	path = dapr
-	url = git@github.com:dapr/dapr.git
+	url = git@github.com:BodhiHu/dapr.git
+  branch = v1.9.4
 [submodule "dapr-cli"]
 	path = dapr-cli
-	url = git@github.com:dapr/cli.git
+	url = git@github.com:BodhiHu/dapr-cli.git
+  branch = v1.9.1
 [submodule "dapr-quickstarts"]
 	path = dapr-quickstarts
 	url = git@github.com:dapr/quickstarts.git
