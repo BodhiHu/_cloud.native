@@ -1,7 +1,7 @@
 [submodule "kind"]
 	path = kind
 	url = git@github.com:BodhiHu/kind.git
-  branch = bodhi/dev
+	uranch = bodhi/dev
 [submodule "kubesphere-ks-installer"]
 	path = kubesphere-ks-installer
 	url = git@github.com:kubesphere/ks-installer.git
@@ -14,11 +14,11 @@
 [submodule "dapr"]
 	path = dapr
 	url = git@github.com:BodhiHu/dapr.git
-  branch = v1.9.4
+	uranch = v1.9.4
 [submodule "dapr-cli"]
 	path = dapr-cli
 	url = git@github.com:BodhiHu/dapr-cli.git
-  branch = v1.9.1
+	uranch = v1.9.1
 [submodule "dapr-quickstarts"]
 	path = dapr-quickstarts
 	url = git@github.com:dapr/quickstarts.git
