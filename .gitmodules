@@ -28,3 +28,10 @@
 [submodule "kubesphere"]
 	path = kubesphere
 	url = git@github.com:BodhiHu/kubesphere.git
+[submodule "gofiber-recipes"]
+	path = gofiber-recipes
+	url = git@github.com:gofiber/recipes.git
+[submodule "spring-tutorials"]
+	path = spring-tutorials
+	url = git@github.com:eugenp/tutorials.git
+
