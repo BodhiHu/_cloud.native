@@ -34,4 +34,7 @@
 [submodule "spring-tutorials"]
 	path = spring-tutorials
 	url = git@github.com:eugenp/tutorials.git
+[submodule "antd-dashboard-libs"]
+	path = antd-dashboard-libs
+	url = git@github.com:BodhiHu/antd-dashboard-libs.git
 
