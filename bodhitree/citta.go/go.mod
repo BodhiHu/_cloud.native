@@ -1,4 +1,4 @@
-module k8s-example
+module citta_go
 
 go 1.15
 
