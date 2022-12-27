@@ -19,8 +19,11 @@ func setUpRoutes(app *fiber.App) {
 	app.Delete("/delete", routes.Delete)
 }
 
-func main() {
+func initDB() {
 	database.ConnectDb()
+}
+
+func main() {
 	app := fiber.New()
 
 	setUpRoutes(app)

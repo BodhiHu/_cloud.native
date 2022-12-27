@@ -1,11 +1,6 @@
 package models
 
-import "gorm.io/gorm"
-
-//Book model
-type Book struct {
-	gorm.Model
-
-	Title  string `json:"title"`
-	Author string `json:"author"`
+type User struct {
+	ID   string `json:"id"`
+	Name string `json:"name"`
 }

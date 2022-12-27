@@ -38,3 +38,12 @@
 	path = antd-dashboard-libs
 	url = git@github.com:BodhiHu/antd-dashboard-libs.git
 
+[submodule "dapr-sdk-java"]
+	path = dapr-sdk-java
+	url = https://github.com/dapr/java-sdk.git
+[submodule "dapr-sdk-go"]
+	path = dapr-sdk-go
+	url = https://github.com/dapr/go-sdk.git
+[submodule "dapr-sdk-python"]
+	path = dapr-sdk-python
+	url = https://github.com/dapr/python-sdk.git
