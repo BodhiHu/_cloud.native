@@ -3,30 +3,18 @@ package main
 import (
 	"log"
 
-	"citta_go/database"
+	db "citta_go/database"
 	"citta_go/routes"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
 )
 
-func setUpRoutes(app *fiber.App) {
-	app.Get("/hello", routes.Hello)
-	app.Get("/allbooks", routes.AllBooks)
-	app.Post("/addbook", routes.AddBook)
-	app.Post("/book", routes.Book)
-	app.Put("/update", routes.Update)
-	app.Delete("/delete", routes.Delete)
-}
-
-func initDB() {
-	database.ConnectDb()
-}
-
 func main() {
-	app := fiber.New()
+	db.ConnectDB()
 
-	setUpRoutes(app)
+	app := fiber.New()
+	routes.InitRoutes(app)
 
 	app.Use(cors.New())
 

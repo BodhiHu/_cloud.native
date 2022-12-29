@@ -1,6 +1,9 @@
 package controllers
 
 import (
+	"context"
+
+	"github.com/goccy/go-json"
 	"github.com/gofiber/fiber/v2"
 
 	"citta_go/models"
@@ -17,40 +20,12 @@ func NewUser(c *fiber.Ctx) error {
 		return c.Status(400).JSON(err.Error())
 	}
 
-	statestore.GetStore()
+	userJSON, err := json.Marshal(user)
+	if err != nil {
+		return c.Status(500).JSON(err.Error())
+	}
+
+	statestore.GetStore().SaveState(context.TODO(), user.ID, []byte(userJSON))
 
 	return c.Status(200).JSON(user)
-}
-
-// AllBooks
-func AllBooks(c *fiber.Ctx) error {
-	books := []models.Book{}
-	database.DB.Db.Find(&books)
-
-	return c.Status(200).JSON(books)
-}
-
-// Update
-func Update(c *fiber.Ctx) error {
-	book := []models.Book{}
-	title := new(models.Book)
-	if err := c.BodyParser(title); err != nil {
-		return c.Status(400).JSON(err.Error())
-	}
-
-	database.DB.Db.Model(&book).Where("title = ?", title.Title).Update("author", title.Author)
-
-	return c.Status(400).JSON("updated")
-}
-
-// Delete
-func Delete(c *fiber.Ctx) error {
-	book := []models.Book{}
-	title := new(models.Book)
-	if err := c.BodyParser(title); err != nil {
-		return c.Status(400).JSON(err.Error())
-	}
-	database.DB.Db.Where("title = ?", title.Title).Delete(&book)
-
-	return c.Status(200).JSON("deleted")
 }
