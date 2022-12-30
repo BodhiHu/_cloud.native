@@ -1,13 +1,10 @@
 package controllers
 
 import (
-	"context"
-
-	"github.com/goccy/go-json"
 	"github.com/gofiber/fiber/v2"
 
+	db "citta_go/database"
 	"citta_go/models"
-	"citta_go/statestore"
 )
 
 func Echo(c *fiber.Ctx) error {
@@ -20,12 +17,19 @@ func NewUser(c *fiber.Ctx) error {
 		return c.Status(400).JSON(err.Error())
 	}
 
-	userJSON, err := json.Marshal(user)
-	if err != nil {
-		return c.Status(500).JSON(err.Error())
-	}
+	db.DB.Create(user)
 
-	statestore.GetStore().SaveState(context.TODO(), user.ID, []byte(userJSON))
+	return c.Status(200).JSON(user)
+}
+
+func GetUser(c *fiber.Ctx) error {
+
+	var userId = c.Params("id")
+	var user models.User
+	res := db.DB.First(&user, userId)
+	if res.Error != nil {
+		return c.SendStatus(404)
+	}
 
 	return c.Status(200).JSON(user)
 }

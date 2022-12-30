@@ -16,14 +16,14 @@ func ConnectDB() {
 	dsn := "host=localhost user=bodhi password='bodhicitta' dbname=bodhitree port=54321 sslmode=disable TimeZone=Asia/Shanghai"
 
 	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{
-		Logger: logger.Default.LogMode(logger.Info),
+		Logger: logger.Default.LogMode(logger.Warn),
 	})
 	if err != nil {
 		log.Fatal("Failed to connect to database. \n", err)
 	}
 
 	log.Println("Connected to database")
-	db.Logger = logger.Default.LogMode(logger.Info)
+	db.Logger = logger.Default.LogMode(logger.Warn)
 
 	log.Println("Running DB migrations")
 	db.AutoMigrate(&models.User{})

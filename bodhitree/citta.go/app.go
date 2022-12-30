@@ -8,19 +8,16 @@ import (
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
+	"github.com/gofiber/fiber/v2/middleware/recover"
 )
 
 func main() {
-	db.ConnectDB()
-
 	app := fiber.New()
-	routes.InitRoutes(app)
-
 	app.Use(cors.New())
+	app.Use(recover.New())
 
-	app.Use(func(c *fiber.Ctx) error {
-		return c.SendStatus(404) // => 404 "Not Found"
-	})
+	db.ConnectDB()
+	routes.InitRoutes(app)
 
 	log.Fatal(app.Listen(":3000"))
 }
