@@ -3,11 +3,11 @@ package routes
 import (
 	"github.com/gofiber/fiber/v2"
 
-	"citta_go/controllers"
+	repos "citta_go/repos"
 )
 
-func InitRoutes(app *fiber.App) {
-	app.Get("/", controllers.Echo)
-	app.Post("/user", controllers.NewUser)
-	app.Get("/user/:id", controllers.GetUser)
+func Init(app *fiber.App) {
+	app.Get("/", repos.Echo)
+	app.Post("/user", repos.Users.Create)
+	app.Get("/user/:id", repos.Users.GetById)
 }
