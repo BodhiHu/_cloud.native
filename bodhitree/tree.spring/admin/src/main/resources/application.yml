@@ -1,0 +1,9 @@
+debug: true
+
+spring:
+  application:
+    name: bodhitree.admin
+
+server:
+  port: 9110
+

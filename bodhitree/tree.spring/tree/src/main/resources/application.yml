@@ -1,0 +1,56 @@
+debug: true
+
+spring:
+  application:
+    name: bodhitree.tree
+  jackson:
+    default-property-inclusion: non_null
+# mvc:
+#   view:
+#     prefix: /pages/
+#     suffix: .html
+#   static-path-pattern: /public/**, /resources/**, /res/**, /static/**
+# resources:
+#   static-locations: classpath:/static, classpath:/public, classpath:/resources, classpath:/webapp/resources
+  boot:
+    admin:
+      client:
+        enabled: false
+        url: http://127.0.0.1:9110 # admin server url
+
+  devtools:
+    restart:
+      enabled: true
+
+management:
+  server:
+    port: 7602
+  security:
+    enabled: true
+  endpoints:
+    enabled-by-default: false
+    web:
+      exposure:
+        #include: "*" # expose all endpoint
+        include: ""
+server:
+  port: 8602
+
+jwt:
+  secret: javainuse
+
+logging:
+  pattern:
+    console: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
+    file:    "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
+  level:
+    root: WARN
+    bodhitree.tree: DEBUG
+    org.springframework: WARN
+    org.springframework.boot.autoconfigure: INFO
+    org.springframework.transaction: WARN
+    org.springframework.web.servlet.mvc: INFO
+    org.springframework.web.filter.CommonsRequestLoggingFilter: WARN
+    org.springframework.data.mongodb: DEBUG
+    #org.springframework.security: DEBUG
+    org.hibernate.SQL: WARN

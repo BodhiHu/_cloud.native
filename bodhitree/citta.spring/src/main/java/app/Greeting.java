@@ -1,6 +1,5 @@
 package app;
 
-
 public class Greeting {
 
 	private String message;

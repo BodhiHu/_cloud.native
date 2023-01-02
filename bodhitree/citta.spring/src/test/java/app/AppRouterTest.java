@@ -10,10 +10,13 @@ import org.springframework.test.web.reactive.server.WebTestClient;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import app.Application;
+import app.Greeting;
+
 @ExtendWith(SpringExtension.class)
 //  We create a `@SpringBootTest`, starting an actual server on a `RANDOM_PORT`
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class GreetingRouterTest {
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, classes = Application.class)
+public class AppRouterTest {
 
 	// Spring Boot will create a `WebTestClient` for you,
 	// already configure and ready to issue requests against "localhost:RANDOM_PORT"

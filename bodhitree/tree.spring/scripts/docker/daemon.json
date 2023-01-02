@@ -1,0 +1,16 @@
+{
+  "debug": true,
+  "tls": true,
+  "tlscert": "/var/docker/server.pem",
+  "tlskey": "/var/docker/serverkey.pem",
+  "host": "tcp://0.0.0.0:2376",
+  "log-driver": "json-file",
+	"log-opts": {
+		"max-size": "10m",
+		"max-file":"5",
+		"labels": "docker",
+		"env": "os,customer"
+	},
+  "log-level": ""
+}
+
