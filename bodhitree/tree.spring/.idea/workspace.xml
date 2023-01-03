@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="73f8cdf0-dd29-4ab3-a476-be1e5d1604ef" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/java/bodhitree/admin/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/auth/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/test/java/auth/ApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/docker/docker-cleanup-resources.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/mongodb/recipes.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/mysql/set up.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/wiki.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/gateway/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/gateway/filters/pre/SimpleFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/test/java/gateway/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/bootRun.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/docker/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/docker/daemon.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/docker/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/docker/docker-hints.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/docker/dockerd.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/docker/services.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/docker/startServices.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/gradle/commons.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/mysql/bodhitree.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/mysql/create-database(schema).sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/mysql/miscs.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/ssh-keys/generate-key-pairs.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/startMongodb.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/AppConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/AppContext.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/AppExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/AppPostBootRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/RequestLoggingFilterConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/WebConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/WebSecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/controllers/AuthController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/controllers/CourseController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/controllers/EmailController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/controllers/ExploreController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/controllers/SmsController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/controllers/SubjectController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/controllers/TagController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/i18n/I18N.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/i18n/LocaleResolver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/lib/CryptoUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/lib/DateUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/lib/HttpReq.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/lib/HttpUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/lib/JSON.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/lib/Logs.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/lib/MapUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/lib/MobilePhone.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/lib/NumberUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/lib/ResUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/lib/RestException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/lib/Result.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/lib/XML.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/lib/aliyun/Cloud.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/lib/aliyun/SMS.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/lib/aliyun/SMSImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/lib/aliyun/mock/SMSMock.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/lib/auth/AuthRequestFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/lib/auth/AuthUserDetails.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/lib/auth/JwtAuthEntryPoint.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/lib/auth/JwtToken.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/lib/auth/JwtTokenUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/lib/db/DbMigrate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/lib/db/Migrations.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/lib/db/MongoUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/models/Course.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/models/CourseRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/models/Migration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/models/MigrationRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/models/Schema.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/models/Subject.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/models/SubjectRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/models/Tag.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/models/TagRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/models/Token.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/models/TokenRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/models/TokenValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/models/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/models/UserRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/models/UserValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/models/common/Link.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/models/mixins/Mixins.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/models/mixins/Timestamps.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/services/AuthService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/services/CourseService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/services/SmsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/services/SubjectService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/services/TagServices.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/services/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/services/config/PagingCfg.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/services/models/AuthorDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/services/models/AuthorVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/services/models/CourseDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/services/models/CourseLandingVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/services/models/CourseVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/services/models/ExploreVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/services/models/common/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/java/BodhiTree/tree/services/utils/SvcUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/resources/initial-data/subjects/buddha-zh_cn.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/resources/initial-data/subjects/confucius-zh_cn.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/resources/initial-data/subjects/laotse-zh_cn.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/resources/initial-data/tags/tags.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/resources/messages_en.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/resources/messages_zh.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/resources/mongodb/schemas/User.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/resources/ssh-keys/dev/private_key.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/resources/ssh-keys/dev/private_key_pkcs8.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/resources/ssh-keys/dev/public_key.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/webapp/WEB-INF/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tree/src/main/webapp/pages/.gitkeep" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2JlDSZRemW82ZzTE84ZoCXZlf0W" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="73f8cdf0-dd29-4ab3-a476-be1e5d1604ef" name="Changes" comment="" />
+      <created>1672643781355</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1672643781355</updated>
+    </task>
+    <servers />
+  </component>
+</project>
