@@ -27,5 +27,4 @@ public class SmsController {
         return smsService.sendCode(phone);
     }
 
-
 }

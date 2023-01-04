@@ -53,3 +53,6 @@
 [submodule "dapr-docs"]
 	path = dapr-docs
 	url = https://github.com/dapr/docs.git
+[submodule "ionic-docs-demo"]
+	path = ionic-docs-demo
+	url = https://github.com/ionic-team/docs-demo.git
