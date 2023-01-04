@@ -47,3 +47,9 @@
 [submodule "dapr-sdk-python"]
 	path = dapr-sdk-python
 	url = https://github.com/dapr/python-sdk.git
+[submodule "dapr-components-contrib"]
+	path = dapr-components-contrib
+	url = https://github.com/dapr/components-contrib.git
+[submodule "dapr-docs"]
+	path = dapr-docs
+	url = https://github.com/dapr/docs.git
