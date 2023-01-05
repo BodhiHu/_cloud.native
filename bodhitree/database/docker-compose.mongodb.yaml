@@ -1,7 +1,7 @@
 version: '3.0'
 
 services:
-  postgresdb:
+  mongodb:
     container_name: "bodhitree-mongodb"
     image: mongo
     restart: unless-stopped
