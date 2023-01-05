@@ -1,6 +1,7 @@
 package BodhiTree.tree;
 
 import BodhiTree.tree.models.Schema;
+import com.mongodb.ConnectionString;
 import com.mongodb.MongoClientSettings;
 import com.mongodb.MongoCredential;
 import com.mongodb.ServerAddress;
@@ -43,9 +44,6 @@ public class AppConfig {
     public static MongoClient getMongoClient () {
 
         if (_mongoClient == null) {
-
-            MongoCredential credential = MongoCredential.createCredential("bodhi", DB_NAME, "BodhiTree".toCharArray());
-
             CodecRegistry pojoCodecRegistry = CodecRegistries.fromRegistries(
                 MongoClientSettings.getDefaultCodecRegistry(),
                 CodecRegistries.fromProviders(
@@ -55,9 +53,7 @@ public class AppConfig {
 
             _mongoClient = MongoClients.create(
                 MongoClientSettings.builder()
-                    .applyToClusterSettings(builder ->
-                        builder.hosts(Arrays.asList(new ServerAddress("localhost", 27017))))
-                    .credential(credential)
+                    .applyConnectionString(new ConnectionString("mongodb://bodhi:bodhicitta@localhost:27017/"))
                     .codecRegistry(pojoCodecRegistry)
                     .build()
             );
