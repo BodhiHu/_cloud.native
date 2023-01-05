@@ -2,6 +2,8 @@ package main
 
 import (
 	"log"
+	"runtime"
+	"sync"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
@@ -15,10 +17,6 @@ import (
 )
 
 func main() {
-	app := fiber.New()
-	app.Use(cors.New())
-	app.Use(recover.New())
-
 	db.Init(
 		"host=localhost user=bodhi password='bodhicitta' dbname=bodhitree port=54321 sslmode=disable TimeZone=Asia/Shanghai",
 		func(DB *gorm.DB) {
@@ -27,7 +25,37 @@ func main() {
 		},
 	)
 	repos.Init(db.DB)
-	routes.Init(app)
 
-	log.Fatal(app.Listen(":3000"))
+	wg := new(sync.WaitGroup)
+	N := runtime.NumCPU()
+	if N > 1 {
+		N = 1
+	}
+	C := make(chan int, N)
+
+	for i := 0; i < N; i++ {
+		wg.Add(1)
+		go func(i int) {
+			app := fiber.New(fiber.Config{
+				Prefork: !true,
+			})
+			app.Use(cors.New())
+			app.Use(recover.New())
+
+			routes.Init(app)
+
+			C <- i
+			log.Print("Listening in goroutine ", <-C)
+
+			log.Fatal(app.Listen(":3000"))
+
+			C <- -1
+			wg.Done()
+		}(i)
+	}
+
+	wg.Wait()
+	for e := range C {
+		log.Print("fiber routine exited with code ", e)
+	}
 }
