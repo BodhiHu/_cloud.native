@@ -4,6 +4,7 @@ import (
 	"log"
 	"runtime"
 	"sync"
+	"time"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
@@ -26,36 +27,47 @@ func main() {
 	)
 	repos.Init(db.DB)
 
+	app := fiber.New(fiber.Config{
+		Prefork: !true,
+	})
+	app.Use(cors.New())
+	app.Use(recover.New())
+
+	routes.Init(app)
+
+	go someRoutine()
+
+	log.Fatal(app.Listen(":3000"))
+}
+
+func someRoutine() {
+	time.Sleep(time.Second)
+	log.Print("--------------- someRoutine ---------------------------")
+
 	wg := new(sync.WaitGroup)
 	N := runtime.NumCPU()
-	if N > 1 {
-		N = 1
+	if N > 5 {
+		N = 5
 	}
 	C := make(chan int, N)
 
 	for i := 0; i < N; i++ {
 		wg.Add(1)
 		go func(i int) {
-			app := fiber.New(fiber.Config{
-				Prefork: !true,
-			})
-			app.Use(cors.New())
-			app.Use(recover.New())
-
-			routes.Init(app)
-
-			C <- i
-			log.Print("Listening in goroutine ", <-C)
-
-			log.Fatal(app.Listen(":3000"))
-
-			C <- -1
+			seconds := i + 1
+			time.Sleep(time.Duration(seconds) * time.Second)
+			log.Print("time delay routine done: ", seconds, " seconds")
+			C <- seconds
 			wg.Done()
 		}(i)
 	}
 
 	wg.Wait()
-	for e := range C {
-		log.Print("fiber routine exited with code ", e)
+	waitedSeconds := 0
+	for i := 0; i < N; i++ {
+		waitedSeconds += <-C
 	}
+	log.Print("WaitGroup done, waited ", waitedSeconds, " seconds")
+
+	log.Print("--------------- someRoutine ---------------------------")
 }
