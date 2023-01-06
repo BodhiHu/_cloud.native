@@ -17,16 +17,14 @@ public class AppPostBootRunner implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
         logger.info(format(""));
-        logger.info(format(""));
         logger.info(format(" AppPostBootRunner "));
-
+        logger.info(format(""));
 
         logger.info(format(".... migrate db "));
         DbMigrate.migrate();
-        logger.info(format(".... √ migrate db done "));
-
 
         logger.info(format(""));
+        logger.info(format(".... migrate db done "));
         logger.info(format(""));
     }
 

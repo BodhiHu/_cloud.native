@@ -20,7 +20,7 @@ spring:
 
   devtools:
     restart:
-      enabled: true
+      enabled: false
 
 management:
   server:
@@ -44,13 +44,13 @@ logging:
     console: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
     file:    "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
   level:
-    root: WARN
-    bodhitree.tree: DEBUG
+    root: INFO
+    BodhiTree.tree: DEBUG
     org.springframework: WARN
     org.springframework.boot.autoconfigure: INFO
     org.springframework.transaction: WARN
     org.springframework.web.servlet.mvc: INFO
     org.springframework.web.filter.CommonsRequestLoggingFilter: WARN
-    org.springframework.data.mongodb: DEBUG
-    #org.springframework.security: DEBUG
+    org.springframework.data.mongodb: INFO
+    org.springframework.security: INFO
     org.hibernate.SQL: WARN

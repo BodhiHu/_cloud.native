@@ -57,7 +57,7 @@ func someRoutine() {
 			seconds := i + 1
 			time.Sleep(time.Duration(seconds) * time.Second)
 			log.Print("time delay routine done: ", seconds, " seconds")
-			C <- seconds
+			C <- 1
 			wg.Done()
 		}(i)
 	}

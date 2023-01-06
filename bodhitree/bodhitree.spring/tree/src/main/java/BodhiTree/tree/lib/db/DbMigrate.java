@@ -15,53 +15,30 @@ public class DbMigrate {
         success, error
     }
 
-    static Map<Integer, Migrate> migrations = new HashMap<>();
-
-    public static void migrate () throws Exception {
-
-        Migrations.register(migrations);
-
-
-        int targetVersion = 1;
+    public static void migrate() throws Exception {
 
         try {
             MigrationRepo migrationRepo = (MigrationRepo) AppContext.getBean("migrationRepo");
 
             Migration latestMigration = migrationRepo.findTopByOrderByVersionDesc();
 
-            int currentVersion = 0;
-            if (latestMigration != null) {
-                currentVersion = latestMigration.getVersion();
+            final int currentVersion = latestMigration != null ? latestMigration.getVersion() : 0;
+
+            for (Migrate migrate : Migrations.dbMigrates) {
+                if (migrate.version > currentVersion) {
+                    MigrateState migrateState = migrate.run();
+
+                    Assert.isTrue(migrateState == MigrateState.success, "migration error" + migrate.version);
+
+                    Logs.logger.info("√ migration success for version = " + migrate.version);
+                    migrationRepo.save(new Migration(migrate.version, migrate.description));
+                }
             }
-
-            Assert.isTrue(currentVersion <= targetVersion,
-                "currentVersion(" + currentVersion + ") " +
-                    "should not be greater than targetVersion(" + targetVersion + ")"
-            );
-
-            if (currentVersion == targetVersion) {
-                Logs.logger.info("currentVersion is " + currentVersion + ", equals to targetVersion, no migration needed");
-                return;
-            }
-
-            for (int nextVersion = currentVersion+1; nextVersion <= targetVersion; nextVersion++) {
-
-                Logs.logger.info("running migration for version=" + nextVersion);
-                Migrate nextMigrate = migrations.get(nextVersion);
-                MigrateState migrateState = nextMigrate.run();
-
-                Assert.isTrue(migrateState == MigrateState.success, "migration error" + nextVersion);
-
-                Logs.logger.info("√ migration success for version=" + nextVersion);
-                migrationRepo.save(new Migration(nextVersion, nextMigrate.description));
-            }
-
         } catch (Exception exc) {
             Logs.logger.error(exc.getMessage(), exc);
             throw exc;
         }
     }
-
 
     abstract static class Migrate {
         public int version;

@@ -42,7 +42,7 @@ configurations {
 def remoteDebugArgs = "-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005"
 
 bootJar {
-    baseName = 'bodhitree-tree'
+    baseName = 'DodhiTree-tree'
     version = '0.0.1'
 }
 bootRun {
@@ -64,6 +64,7 @@ dependencies {
 
     compile("org.springframework.boot:spring-boot-devtools:${project.springBootDevtoolsVersion}")
     compile("org.springframework.boot:spring-boot-starter-web:${project.springBootVersion}")
+    compile("org.springframework.boot:spring-boot-starter-webflux:${project.springBootVersion}")
     compile("org.springframework.boot:spring-boot-starter-security:${project.springBootVersion}")
 
     compile("org.springframework.data:spring-data-commons:${project.springDataCommonsVersion}")

@@ -3,7 +3,9 @@ package BodhiTree.tree.models;
 import BodhiTree.tree.AppContext;
 import org.bson.codecs.pojo.annotations.BsonProperty;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.MongoJsonSchemaCreator;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.schema.MongoJsonSchema;
 
 import java.util.Date;
 
@@ -11,6 +13,16 @@ import java.util.Date;
 public class User {
 
     public static final String COLLECTION_NAME = "users";
+
+    private static MongoJsonSchema sJsonSchema;
+    public static MongoJsonSchema jsonSchema() {
+        if (sJsonSchema == null) {
+            sJsonSchema = MongoJsonSchemaCreator
+                    .create(AppContext.mongoTemplate().getConverter())
+                    .createSchemaFor(User.class);
+        }
+        return sJsonSchema;
+    }
 
     private static UserValidator _validator;
     public static UserValidator validator () {
