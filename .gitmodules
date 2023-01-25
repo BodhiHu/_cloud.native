@@ -56,3 +56,21 @@
 [submodule "ionic-docs-demo"]
 	path = ionic-docs-demo
 	url = https://github.com/ionic-team/docs-demo.git
+[submodule "spring-blade"]
+	path = spring-blade
+	url = https://gitee.com/bodhihu/SpringBlade.git
+[submodule "spring-blade-tool"]
+	path = spring-blade-tool
+	url = https://gitee.com/bodhihu/blade-tool.git
+[submodule "spring-cloud-startkit"]
+	path = spring-cloud-startkit
+	url = git@github.com:BodhiHu/SpringCloud.git
+[submodule "spring-learn-all"]
+	path = spring-learn-all
+	url = git@github.com:BodhiHu/Learn-Spring-All.git
+[submodule "element-plus"]
+	path = element-plus
+	url = git@github.com:element-plus/element-plus.git
+[submodule "element-pro-components"]
+	path = element-pro-components
+	url = https://github.com/tolking/element-pro-components.git
