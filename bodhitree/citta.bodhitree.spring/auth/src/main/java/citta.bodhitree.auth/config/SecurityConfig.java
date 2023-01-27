@@ -20,25 +20,30 @@ public class SecurityConfig {
     private final SecurityContextRepository securityRepository;
 
     @Bean
-    public SecurityWebFilterChain securityWebFilterChain(
-                ServerHttpSecurity http,
-                JwtWebFilter jwtWebFilter
-        ) {
+    public SecurityWebFilterChain securityWebFilterChain(ServerHttpSecurity http, JwtWebFilter jwtWebFilter) {
 
         return http
-                .authorizeExchange()
-                .pathMatchers("/auth/login", "/auth/signup").permitAll()
-                .pathMatchers("/v3/api-docs/**", "/swagger-resources/configuration/ui",
-                        "/swagger-resources","/swagger-resources/configuration/security",
-                        "/swagger-ui.html","/css/**", "/js/**","/images/**", "/webjars/**", "**/favicon.ico", "/index").permitAll()
-                .anyExchange().authenticated()
-                .and()
-                .addFilterAfter(jwtWebFilter, SecurityWebFiltersOrder.FIRST)  // 这里注意执行位置一定要在securityContextRepository
-                .securityContextRepository(securityRepository)
-                .formLogin().disable()
-                .httpBasic().disable()
-                .csrf().disable()
-                .logout().disable()
-                .build();
+            .authorizeExchange()
+            .pathMatchers(
+                "/auth/login",
+                "/auth/signup"
+            ).permitAll()
+            .pathMatchers(
+                "/v3/api-docs/**",
+                "/swagger-resources/configuration/ui",
+                "/swagger-resources",
+                "/swagger-resources/configuration/security",
+                "/swagger-ui.html", "/css/**", "/js/**",
+                "/images/**", "/webjars/**", "**/favicon.ico", "/index"
+            ).permitAll()
+//            .anyExchange().authenticated()
+            .and()
+            .addFilterAfter(jwtWebFilter, SecurityWebFiltersOrder.FIRST)
+            .securityContextRepository(securityRepository)
+            .formLogin().disable()
+            .httpBasic().disable()
+            .csrf().disable()
+            .logout().disable()
+            .build();
     }
 }

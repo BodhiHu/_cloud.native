@@ -45,7 +45,9 @@ public class JwtWebFilter implements WebFilter {
         ServerHttpResponse response = exchange.getResponse();
 
         String path = request.getPath().value();
-        if (path.contains("/auth/login") || path.contains("/auth/signout")) return chain.filter(exchange);
+        if (path.contains("/auth/login") || path.contains("/auth/signup")) {
+            return chain.filter(exchange);
+        }
 
         String auth = request.getHeaders().getFirst(HttpHeaders.AUTHORIZATION);
         if (auth == null) {
