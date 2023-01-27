@@ -1,8 +1,10 @@
 package models
 
 type User struct {
-	ID   uint   `json:"id"   gorm:"primaryKey;type:uint;autoIncrement;"`
-	Name string `json:"name" gorm:""`
+	ID          uint   `json:"id"   				gorm:"primaryKey;type:uint;autoIncrement;"`
+	Username    string `json:"username" 		gorm:"not null"`
+	Password    string `json:"password" 		gorm:"default null"`
+	Authorities string `json:"authorities" 	gorm:"default null"`
 }
 
 type Article struct {

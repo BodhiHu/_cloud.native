@@ -49,10 +49,10 @@ public class JwtWebFilter implements WebFilter {
 
         String auth = request.getHeaders().getFirst(HttpHeaders.AUTHORIZATION);
         if (auth == null) {
-            return this.writeErrorMessage(response, HttpStatus.NOT_ACCEPTABLE, "没有携带token");
+            return this.writeErrorMessage(response, HttpStatus.NOT_ACCEPTABLE, "token was missing");
         }
         else if (!auth.startsWith(jwtSigner.getTokenPrefix())) {
-            return this.writeErrorMessage(response, HttpStatus.NOT_ACCEPTABLE, "token 没有以" + jwtSigner.getTokenPrefix() + "开始");
+            return this.writeErrorMessage(response, HttpStatus.NOT_ACCEPTABLE, "token should start with" + jwtSigner.getTokenPrefix());
         }
 
         String token = auth.replace(jwtSigner.getTokenPrefix(),"");

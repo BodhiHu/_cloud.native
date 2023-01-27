@@ -20,7 +20,7 @@ import java.time.Duration;
 @Slf4j
 @RequiredArgsConstructor
 @SecurityScheme(
-        name = "登录",
+        name = "Auth",
         type = SecuritySchemeType.HTTP,
         scheme = "basic"
 )
