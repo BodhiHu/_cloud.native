@@ -74,3 +74,6 @@
 	path = element-pro-components
 	url = https://github.com/tolking/element-pro-components.git
 
+[submodule "k8s-helm-charts"]
+	path = k8s-helm-charts
+	url = git@github.com:bodhitreestudio/k8s-helm-charts.git

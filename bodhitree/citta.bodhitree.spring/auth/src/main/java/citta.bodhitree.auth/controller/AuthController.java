@@ -25,7 +25,7 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 @RequestMapping("auth")
 @Slf4j
-public class LoginController {
+public class AuthController {
 
     private final UserDetailsRepository myUserRepository;
     private final UserService userService;
@@ -44,7 +44,7 @@ public class LoginController {
                 .map(it -> {
                     try {
                         return new HttpResult(HttpStatus.OK.value(),
-                                "成功登录",
+                                "Login success",
                                 new LoginResponse(it.getUsername(),
                                         mapper.writeValueAsString(it
                                                 .getAuthorities()
@@ -57,7 +57,7 @@ public class LoginController {
                     }
                 })
                 .onErrorResume(e -> Mono.empty())
-                .switchIfEmpty(Mono.just(new HttpResult(HttpStatus.UNAUTHORIZED.value(), "登录失败", null)));
+                .switchIfEmpty(Mono.just(new HttpResult(HttpStatus.UNAUTHORIZED.value(), "Login failed", null)));
     }
 
 //    @CrossOrigin
@@ -66,7 +66,7 @@ public class LoginController {
 
         return Mono.just(user)
                 .map(userService::save)
-                .map(it -> new HttpResult(HttpStatus.OK.value(), "注册成功", null))
-                .onErrorResume(e -> Mono.just(new HttpResult(HttpStatus.UNAUTHORIZED.value(), "注册失败", e)));
+                .map(it -> new HttpResult(HttpStatus.OK.value(), "Register success", null))
+                .onErrorResume(e -> Mono.just(new HttpResult(HttpStatus.UNAUTHORIZED.value(), "Register error", e)));
     }
 }

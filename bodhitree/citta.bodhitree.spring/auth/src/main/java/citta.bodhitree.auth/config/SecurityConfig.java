@@ -1,6 +1,5 @@
 package citta.bodhitree.auth.config;
 
-
 import citta.bodhitree.auth.handler.JwtWebFilter;
 import citta.bodhitree.auth.security.SecurityContextRepository;
 import lombok.AllArgsConstructor;
@@ -36,7 +35,7 @@ public class SecurityConfig {
                 "/swagger-ui.html", "/css/**", "/js/**",
                 "/images/**", "/webjars/**", "**/favicon.ico", "/index"
             ).permitAll()
-//            .anyExchange().authenticated()
+            .anyExchange().authenticated()
             .and()
             .addFilterAfter(jwtWebFilter, SecurityWebFiltersOrder.FIRST)
             .securityContextRepository(securityRepository)
