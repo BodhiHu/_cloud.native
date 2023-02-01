@@ -27,7 +27,7 @@ REPO_FILE="docker-ce.repo"
 VERSION="20.10.21"
 DIND_TEST_WAIT=${DIND_TEST_WAIT:-3s}  # Wait time until docker start at dind test env
 
-APT_REPO_CN_MIRROWS="
+APT_REPO_CN_MIRRORS="
 # see https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/
 # 22.04
 
@@ -448,7 +448,7 @@ do_install() {
 					set -x
 				fi
 				sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
-				sudo echo "$APT_REPO_CN_MIRROWS" > /etc/apt/sources.list
+				sudo echo "$APT_REPO_CN_MIRRORS" > /etc/apt/sources.list
 				sudo echo "$HOSTS_MAPPING" >> /etc/hosts
 				$sh_c 'apt-get update -qq >/dev/null'
 				$sh_c "DEBIAN_FRONTEND=noninteractive apt-get install -y -qq $pre_reqs >/dev/null"
