@@ -1,4 +1,11 @@
-## README
+# README
+
+## Prerequisite
+
+1. Install Vagrant
+<!-- 2. Install Ansible (if not Windows) -->
+
+## Commands
 
 Up VMs:
 ```
