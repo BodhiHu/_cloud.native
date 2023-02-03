@@ -82,13 +82,36 @@ cert-manager-webhook-787858fcdb-nlzsq      1/1     Running   0          2m
 * Install Rancher with Helm and your chosen certificate option
 
 ```
-helm install rancher rancher-<CHART_REPO>/rancher \
+helm install rancher rancher-stable/rancher \
   --namespace cattle-system \
   --set hostname=<eg: k8s-rancher.bodhitree.org> \
   --set bootstrapPassword=<eg: bodhi>
 ```
 
+Wait for Rancher to be rolled out:
+```
+kubectl -n cattle-system rollout status deploy/rancher
+Waiting for deployment "rancher" rollout to finish: 0 of 3 updated replicas are available...
+deployment "rancher" successfully rolled out
+```
+
 * Verify that the Rancher server is successfully deployed
+
+After adding the secrets, check if Rancher was rolled out successfully:
+
+```
+kubectl -n cattle-system rollout status deploy/rancher
+Waiting for deployment "rancher" rollout to finish: 0 of 3 updated replicas are available...
+deployment "rancher" successfully rolled out
+```
+
+check the status of the deployment by running the following command:
+
+```
+kubectl -n cattle-system get deploy rancher
+NAME      DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
+rancher   3         3         3            3           3m
+```
 
 * Save your options
 
