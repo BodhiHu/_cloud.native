@@ -20,6 +20,11 @@ Create cluster config file and update it accordingly:
   # --with-kubesphere v3.3.1 # if install kubesphere
 ```
 
+Create cluster:
+```
+./kk create cluster -f cluster-config.yaml
+```
+
 Besides KubeKey, you can also use ks-installer to install kubesphere:
 ```
 https://github.com/kubesphere/ks-installer
