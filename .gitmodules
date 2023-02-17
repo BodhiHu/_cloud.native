@@ -77,3 +77,11 @@
 [submodule "k8s-helm-charts"]
 	path = k8s-helm-charts
 	url = git@github.com:bodhitreestudio/k8s-helm-charts.git
+[submodule "istio"]
+	path = istio
+	url = git@github.com:istio/istio.git
+  branch = release-1.14
+
+[submodule "kubesphere-console"]
+	path = kubesphere-console
+	url = git@github.com:kubesphere/console.git
