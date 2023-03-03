@@ -31,9 +31,6 @@
 [submodule "gofiber-recipes"]
 	path = gofiber-recipes
 	url = git@github.com:gofiber/recipes.git
-[submodule "spring-tutorials"]
-	path = spring-tutorials
-	url = git@github.com:eugenp/tutorials.git
 [submodule "antd-dashboard-libs"]
 	path = antd-dashboard-libs
 	url = git@github.com:BodhiHu/antd-dashboard-libs.git
@@ -85,3 +82,9 @@
 [submodule "kubesphere-console"]
 	path = kubesphere-console
 	url = git@github.com:kubesphere/console.git
+[submodule "vimrc"]
+	path = vimrc
+	url = git@github.com:bodhitreestudio/vimrc.git
+[submodule "dashboard"]
+	path = dashboard
+	url = https://github.com/rancher/dashboard.git
