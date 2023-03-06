@@ -85,3 +85,8 @@
 [submodule "kubesphere-console"]
 	path = kubesphere-console
 	url = git@github.com:kubesphere/console.git
+[submodule "rancher-dashboard"]
+	path = rancher-dashboard
+	url = https://github.com/bodhitreestudio/dashboard.git
+	branch = release-2.7.1
+
