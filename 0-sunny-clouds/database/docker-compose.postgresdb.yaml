@@ -1,0 +1,16 @@
+version: '3.0'
+
+services:
+  postgresdb:
+    container_name: "sunnyclouds-postgresdb"
+    image: postgres
+    restart: unless-stopped
+    volumes:
+       - ./sunnyclouds-pgdata:/var/lib/postgresql/sunnyclouds-pgdata
+    ports:
+      - 54321:5432
+    environment:
+      POSTGRES_USER: bodhi
+      POSTGRES_PASSWORD: bodhicitta
+      POSTGRES_DB: sunnyclouds
+      PGDATA: /var/lib/postgresql/sunnyclouds-pgdata

@@ -15,6 +15,8 @@ docker run -d --restart=unless-stopped \
   --privileged \
   --name rancher-kube-cluster \
   --cpus="1.0" --memory="4g" --memory-swap="4g" \
-  --volume "../:/SunnyClouds"
+  --volume "../:/sunny-clouds"
+  #-e CATTLE_AGENT_IMAGE="registry.cn-hangzhou.aliyuncs.com/rancher/rancher-agent:v2.7.1" \
+  #registry.cn-hangzhou.aliyuncs.com/rancher/rancher:v2.7.1
   rancher/rancher:latest
 ```

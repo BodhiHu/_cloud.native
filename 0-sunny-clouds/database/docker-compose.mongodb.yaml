@@ -1,0 +1,15 @@
+version: '3.0'
+
+services:
+  mongodb:
+    container_name: "sunnyclouds-mongodb"
+    image: mongo
+    restart: unless-stopped
+    volumes:
+      - ./sunnyclouds-mongodb/data:/data/db
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_DATABASE: sunnyclouds 
+      MONGO_INITDB_ROOT_USERNAME: bodhi
+      MONGO_INITDB_ROOT_PASSWORD: bodhicitta

@@ -70,7 +70,6 @@
 [submodule "element-pro-components"]
 	path = element-pro-components
 	url = https://github.com/tolking/element-pro-components.git
-
 [submodule "k8s-helm-charts"]
 	path = k8s-helm-charts
 	url = git@github.com:bodhitreestudio/k8s-helm-charts.git
@@ -78,13 +77,14 @@
 	path = istio
 	url = git@github.com:istio/istio.git
   branch = release-1.14
-
 [submodule "kubesphere-console"]
 	path = kubesphere-console
 	url = git@github.com:kubesphere/console.git
 [submodule "vimrc"]
 	path = vimrc
 	url = git@github.com:bodhitreestudio/vimrc.git
-[submodule "dashboard"]
-	path = dashboard
-	url = https://github.com/rancher/dashboard.git
+[submodule "rancher-dashboard"]
+	path = rancher-dashboard
+	url = https://github.com/bodhitreestudio/dashboard.git
+	branch = release-2.7.1
+
