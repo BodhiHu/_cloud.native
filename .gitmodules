@@ -88,3 +88,6 @@
 	url = https://github.com/bodhitreestudio/dashboard.git
 	branch = release-2.7.1
 
+[submodule "iExercises"]
+	path = iExercises
+	url = https://github.com/BodhiHu/iExercises.git
