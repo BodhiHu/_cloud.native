@@ -91,3 +91,6 @@
 [submodule "iExercises"]
 	path = iExercises
 	url = https://github.com/BodhiHu/iExercises.git
+[submodule "charts"]
+	path = charts
+	url = https://github.com/bitnami/charts.git
