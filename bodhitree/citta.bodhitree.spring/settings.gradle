@@ -1,8 +1,0 @@
-
-rootProject.name = 'BodhiTree'
-
-//include 'admin'
-//include 'gateway'
-include 'auth'
-include 'tree'
-

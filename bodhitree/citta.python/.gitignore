@@ -1,9 +1,0 @@
-__pycache__
-.idea
-.vscode
-*.pyc
-.env
-.venv
-logs
-.ssh
-*.sqlite3
