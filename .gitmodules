@@ -36,7 +36,7 @@
 	url = git@github.com:BodhiHu/antd-dashboard-libs.git
 [submodule "dapr-sdk-java"]
 	path = dapr-sdk-java
-	url = https://github.com/dapr/java-sdk.git
+	url = https://github.com/BodhiHu/java-sdk.git
 [submodule "dapr-sdk-go"]
 	path = dapr-sdk-go
 	url = https://github.com/dapr/go-sdk.git
